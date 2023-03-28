@@ -8,6 +8,7 @@ from itertools import chain
 import random
 
 
+
 # Create your views here.
 
 @login_required(login_url='signin')
@@ -235,4 +236,6 @@ def signin(request):
 @login_required(login_url='signin')    
 def logout(request):
     auth.logout(request)
+
     return redirect('signin')
+
